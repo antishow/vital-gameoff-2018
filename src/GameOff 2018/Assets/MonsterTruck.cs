@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class MonsterTruck : MonoBehaviour {
+    public Color color;
 
     private GameObject player;
     private NavMeshAgent navMeshAgent;
@@ -12,6 +14,14 @@ public class MonsterTruck : MonoBehaviour {
     {
         player = GameObject.FindWithTag("Player");
         navMeshAgent = (NavMeshAgent)GetComponent("NavMeshAgent");
+
+        Renderer[] renderers = GetComponentsInChildren<Renderer>().Select(r =>
+        {
+            Material mat = r.material;
+            mat.color = color;
+
+            return r;
+        }).ToArray<Renderer>();
     }
 
     // Use this for initialization
