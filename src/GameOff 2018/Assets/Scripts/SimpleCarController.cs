@@ -48,7 +48,7 @@ public class SimpleCarController : MonoBehaviour {
 
 		_collider.GetWorldPose(out _pos, out _quat);
 
-		 _quat = _quat * Quaternion.Euler(new Vector3(0, 0, 90));
+		//  _quat = _quat * Quaternion.Euler(new Vector3(0, 0, 90));
 
 		_transform.position = _pos;
 		_transform.rotation = _quat;
