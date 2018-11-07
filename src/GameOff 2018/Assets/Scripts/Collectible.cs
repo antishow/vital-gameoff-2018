@@ -17,6 +17,7 @@ public class Collectible : MonoBehaviour {
 
     private void Trigger()
     {
+        GameController.GetPoints(PointValue);
         GameObject effect = Instantiate(CollectionEffect, transform.position, Quaternion.identity, transform.parent);
         OnCollect();
         gameObject.SetActive(false);
