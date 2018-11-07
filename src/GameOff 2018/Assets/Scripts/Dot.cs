@@ -14,9 +14,6 @@ public class Dot : MonoBehaviour {
         animator = GetComponent<Animator>();
         float wave = 4.0f;
         int index = transform.GetSiblingIndex();
-
-        AnimatorStateInfo i = animator.GetCurrentAnimatorStateInfo(0);
-        float clipLength = animator.GetCurrentAnimatorStateInfo(0).length;
         float offset = Mathf.Repeat(index, wave) / wave;
 
         animator.Play("Dot", 0, offset);
