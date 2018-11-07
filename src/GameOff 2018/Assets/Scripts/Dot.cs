@@ -13,5 +13,6 @@ public class Dot : MonoBehaviour {
 
     void OnCollect() {
         Debug.Log("MONCH");
+        GameController.EatDot();
     }
 }
