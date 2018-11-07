@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Collectible))]
 public class Dot : MonoBehaviour {
     private Collectible collectible;
 

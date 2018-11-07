@@ -11,11 +11,16 @@ public class Collectible : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other){
         if (other.tag == "Player" && OnCollect != null) {
-            gameObject.SetActive(false);
-            GameObject effect = Instantiate(CollectionEffect, transform.position, Quaternion.identity, transform.parent);
-            OnCollect();
-            Destroy(effect, 3.0f);
-            Destroy(this, 3.1f);
+            Trigger();
         }
+    }
+
+    private void Trigger()
+    {
+        GameObject effect = Instantiate(CollectionEffect, transform.position, Quaternion.identity, transform.parent);
+        OnCollect();
+        gameObject.SetActive(false);
+        Destroy(effect, 1.0f);
+        Destroy(this.gameObject, 1.1f);
     }
 }
