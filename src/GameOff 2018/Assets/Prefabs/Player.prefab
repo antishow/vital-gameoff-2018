@@ -819,8 +819,8 @@ MonoBehaviour:
   rearDriverT: {fileID: 4825772072255424}
   rearPassengerT: {fileID: 4267002207082026}
   maxSteerAngle: 30
-  motorForce: 0.2
-  TopSpeed: 0.75
+  motorForce: 1.2
+  TopSpeed: 10
 --- !u!146 &146015428401071612
 WheelCollider:
   m_ObjectHideFlags: 1

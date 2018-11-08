@@ -46,19 +46,13 @@ public class GameController : MonoBehaviour {
     }
 
     public static void EatDot() {
-        //Minus 1 because the dot I just ate still exists
-        int count = GetDotCount() - 1;
-
-        Debug.LogFormat("There are {0} dots left!!", count);
-        if (count == 0) {
-            Debug.Log("ATE EM ALL!");
+        if (GetDotCount() == 0) {
             _instance.Invoke("GoToNextLevel", 1.0f);
         }
     }
 
     public static void GetPoints(int points) {
-        Debug.LogFormat("You got {0} points. Great Job!", points);
         _instance.Score += points;
-        Debug.LogFormat("  Your total score is now {0}", _instance.Score);
+        Debug.Log(_instance.Score);
     }
 }

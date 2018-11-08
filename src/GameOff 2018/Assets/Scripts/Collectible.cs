@@ -10,7 +10,6 @@ public class Collectible : MonoBehaviour {
     public event CollectedEvent OnCollect;
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log(".");
         if (other.tag == "Player" && OnCollect != null) {
             Trigger();
         }
@@ -20,9 +19,9 @@ public class Collectible : MonoBehaviour {
     {
         GameController.GetPoints(PointValue);
         GameObject effect = Instantiate(CollectionEffect, transform.position, Quaternion.identity, transform.parent);
-        OnCollect();
         gameObject.SetActive(false);
         Destroy(effect, 1.0f);
-        Destroy(this.gameObject, 1.1f);
+        Destroy(this.gameObject);
+        OnCollect();
     }
 }
