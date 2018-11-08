@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4364421355690718}
   - component: {fileID: 20562019683311138}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4918984846099228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FDWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4821242879209456}
   - component: {fileID: 146649214479996086}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RDWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4267002207082026}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RPWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 4052334425978426}
   - component: {fileID: 33997459363638320}
   - component: {fileID: 23930028889090706}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4086678219664560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WheelColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 54789595939099150}
   - component: {fileID: 65919877147979968}
   - component: {fileID: 114303838579038178}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 4194294398957976}
   - component: {fileID: 33226723795977222}
   - component: {fileID: 23131428837902438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4490293757597710}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WheelTransforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4574813913442464}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FPWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181152259100268}
   - component: {fileID: 146369368631061234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FDWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4379322655438896}
   - component: {fileID: 33428958448163688}
   - component: {fileID: 23674195130609296}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4436620506924218}
   - component: {fileID: 146015428401071612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FPWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897817561824490}
   - component: {fileID: 146265402433077422}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RPWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 4458929267412530}
   - component: {fileID: 33739866975253886}
   - component: {fileID: 23540833427681814}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4825772072255424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RDWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 4185841197027228}
   - component: {fileID: 33713064302388500}
   - component: {fileID: 23223080400209716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,9 +373,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351727529054080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -242.78424, y: 2.7, z: -236.1312}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.3, y: 0, z: 8.9615965}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 4185841197027228}
   - {fileID: 4490293757597710}
@@ -383,7 +383,7 @@ Transform:
   - {fileID: 4364421355690718}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4364421355690718
 Transform:
   m_ObjectHideFlags: 1
@@ -796,8 +796,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9973512, y: 0.21998763, z: 6.25784}
-  m_Center: {x: -0.10591736, y: 0.61538905, z: -0.23054658}
+  m_Size: {x: 3, y: 3.19, z: 6}
+  m_Center: {x: 0, y: 2.12, z: 0}
 --- !u!114 &114303838579038178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -819,8 +819,8 @@ MonoBehaviour:
   rearDriverT: {fileID: 4825772072255424}
   rearPassengerT: {fileID: 4267002207082026}
   maxSteerAngle: 30
-  motorForce: 2000000
-  TopSpeed: 100
+  motorForce: 0.2
+  TopSpeed: 0.75
 --- !u!146 &146015428401071612
 WheelCollider:
   m_ObjectHideFlags: 1

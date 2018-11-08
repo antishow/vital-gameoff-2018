@@ -10,6 +10,7 @@ public class Collectible : MonoBehaviour {
     public event CollectedEvent OnCollect;
 
     private void OnTriggerEnter(Collider other){
+        Debug.Log(".");
         if (other.tag == "Player" && OnCollect != null) {
             Trigger();
         }
