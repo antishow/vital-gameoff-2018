@@ -7,7 +7,9 @@ public class Dot : MonoBehaviour {
     private Collectible collectible;
     private Animator animator;
 
-    private void Awake() {
+    private void Start() {
+        Debug.Log("WITNESS ME!");
+
         collectible = GetComponent<Collectible>();
         collectible.OnCollect += OnCollect;
 

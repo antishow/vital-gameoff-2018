@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4812775907248860}
   - component: {fileID: 33075399619280442}
   - component: {fileID: 23502318576489738}
-  - component: {fileID: 65130301778784974}
   m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
@@ -41,7 +40,6 @@ GameObject:
   - component: {fileID: 114183266873422542}
   - component: {fileID: 114451910979889338}
   - component: {fileID: 95440090122667464}
-  - component: {fileID: 54827036224821146}
   m_Layer: 11
   m_Name: Dot
   m_TagString: Dot
@@ -56,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502171658983844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.3, z: 9}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4812775907248860}
@@ -118,33 +116,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197472150338954}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54827036224821146
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502171658983844}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 0
---- !u!65 &65130301778784974
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1197472150338954}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95440090122667464
 Animator:
   serializedVersion: 3

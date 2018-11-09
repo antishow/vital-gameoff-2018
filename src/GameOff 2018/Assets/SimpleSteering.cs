@@ -30,9 +30,4 @@ public class SimpleSteering : MonoBehaviour {
 
         rb.AddForce(transform.forward * throttle * Speed, ForceMode.Acceleration);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.LogFormat("Trigger Enter: {0}", other.name);
-    }
 }
