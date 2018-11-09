@@ -3,26 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleSteering : MonoBehaviour {
-    private Vector3 Velocity;
+    private Rigidbody rb;
+
+    [Range(0, 1.0f)]
+    public float Decay = 0.6f;
+    public float Speed = 10.0f;
+    public float TurnSpeed = 4.0f;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Update() {
-        //Decay the velocity so we'll slow to a stop if not doing anything
-        Velocity *= 0.4f;
-
         //Get the input, note turn is proportional with throttle so we don't 
         //turn unless moving and will turn in the opposite direction if reversing
         float throttle = Input.GetAxis("Vertical");
         float turn = throttle * Input.GetAxis("Horizontal");
 
         //Add the turn
-        Vector3 rot = transform.rotation.eulerAngles;
-        rot.y += turn;
-        transform.rotation = Quaternion.Euler(rot);
+        if (System.Math.Abs(turn) > 0.01f) {
+            Vector3 rot = transform.rotation.eulerAngles;
+            rot.y += turn * TurnSpeed;
+            rb.MoveRotation(Quaternion.Euler(rot));
+        }
 
-        //Move forward
-        Velocity += (transform.forward* throttle);
-        Velocity *= Time.deltaTime;
-        transform.position += Velocity;
+        rb.AddForce(transform.forward * throttle * Speed, ForceMode.Acceleration);
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.LogFormat("Trigger Enter: {0}", other.name);
     }
 }
