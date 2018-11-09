@@ -8,8 +8,6 @@ public class Dot : MonoBehaviour {
     private Animator animator;
 
     private void Start() {
-        Debug.Log("WITNESS ME!");
-
         collectible = GetComponent<Collectible>();
         collectible.OnCollect += OnCollect;
 
