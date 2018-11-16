@@ -9,6 +9,7 @@ public class SimpleSteering : MonoBehaviour {
     public float Decay = 0.6f;
     public float Speed = 10.0f;
     public float TurnSpeed = 4.0f;
+    public float MaxSpeed = 5.0f;
 
     private void Awake()
     {
@@ -19,7 +20,10 @@ public class SimpleSteering : MonoBehaviour {
         //Get the input, note turn is proportional with throttle so we don't 
         //turn unless moving and will turn in the opposite direction if reversing
         float throttle = Input.GetAxis("Vertical");
-        float turn = throttle * Input.GetAxis("Horizontal");
+        Vector3 localVelocity = transform.InverseTransformDirection(rb.velocity);
+        float speed = localVelocity.z;
+        float turn = (speed / MaxSpeed) * Input.GetAxis("Horizontal");
+
 
         //Add the turn
         if (System.Math.Abs(turn) > 0.01f) {
