@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
 public class MonsterTruck : MonoBehaviour {
     public Color color;
     public float targetUpdateFrequency;
@@ -32,6 +31,12 @@ public class MonsterTruck : MonoBehaviour {
     void Start () {
         InvokeRepeating("UpdateTarget", 0, targetUpdateFrequency);
 	}
+
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "Player") {
+            collision.gameObject.GetComponent<Player>().Die();
+        }
+    }
 
     private void OnDrawGizmos() {
         Gizmos.color = color;
