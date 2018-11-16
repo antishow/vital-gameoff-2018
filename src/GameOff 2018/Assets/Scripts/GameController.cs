@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class GameController : MonoBehaviour {
     private static GameController _instance;
@@ -9,6 +10,7 @@ public class GameController : MonoBehaviour {
 
     public int Level = 0;
     public int Score = 0;
+    public int Lives = 0;
 
     private void Awake() {
         GameObject gc = GameObject.Find("GameController");
@@ -22,6 +24,13 @@ public class GameController : MonoBehaviour {
 
     private void Start() {
         NewGame();
+    }
+
+    public static void ResetActors() {
+        Respawner[] actors = FindObjectsOfType<Respawner>().Select(r => {
+            r.Respawn();
+            return r;
+        }).ToArray();
     }
 
     private void GoToLevel(int n) {
@@ -42,6 +51,7 @@ public class GameController : MonoBehaviour {
     public void NewGame() {
         Debug.Log("NEW GAME!");
         Score = 0;
+        Lives = STARTING_LIVES;
         GoToLevel(1);
     }
 
@@ -53,6 +63,5 @@ public class GameController : MonoBehaviour {
 
     public static void GetPoints(int points) {
         _instance.Score += points;
-        Debug.Log(_instance.Score);
     }
 }

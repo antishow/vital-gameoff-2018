@@ -32,6 +32,12 @@ public class MonsterTruck : MonoBehaviour {
         InvokeRepeating("UpdateTarget", 0, targetUpdateFrequency);
 	}
 
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "Player") {
+            collision.gameObject.GetComponent<Player>().Die();
+        }
+    }
+
     private void OnDrawGizmos() {
         Gizmos.color = color;
         Gizmos.DrawWireSphere(target, 0.3f);

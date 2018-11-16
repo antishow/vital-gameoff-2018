@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: 0
   Score: 0
+  Lives: 0
 --- !u!1 &121475534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1508,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599118276}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &726448824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100010, guid: d8a8f6e110c384db3bd6dd650736b222,
+    type: 3}
+  m_PrefabInternal: {fileID: 2070679364}
 --- !u!1 &737551942
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,13 +3495,14 @@ GameObject:
   - component: {fileID: 1917414842}
   - component: {fileID: 1917414844}
   - component: {fileID: 1917414843}
+  - component: {fileID: 1917414845}
   m_Layer: 9
   m_Name: MonsterTruck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1917414841
 Transform:
   m_ObjectHideFlags: 0
@@ -3549,7 +3556,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.86
-  m_Speed: 3
+  m_Speed: 5
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 2000
@@ -3561,6 +3568,17 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1917414845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917414840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874b4ee68e60a48178d44d53c18ba04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1948085647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4138,6 +4156,8 @@ GameObject:
   - component: {fileID: 2102232951}
   - component: {fileID: 2102232950}
   - component: {fileID: 2102232955}
+  - component: {fileID: 2102232956}
+  - component: {fileID: 2102232957}
   m_Layer: 10
   m_Name: Cube
   m_TagString: Player
@@ -4244,6 +4264,29 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &2102232956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102232949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfd65b87edb84641bc33003356280cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Body: {fileID: 726448824}
+--- !u!114 &2102232957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102232949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874b4ee68e60a48178d44d53c18ba04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131004190
 GameObject:
   m_ObjectHideFlags: 0
